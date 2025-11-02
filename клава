@@ -1,0 +1,31 @@
+
+  "poi_marker": {
+    "id": "br-01",
+    "type": "shop",
+    "label": "АТБ, можна заходити і купувати",
+    "gps": { "lat": 50.5132, "lon": 30.7891 },
+    "interaction": {
+      "trigger": "on_enter",                 /* тригер: на вхід у радіус */
+      "radius_m": 10,                        /* радіус дії в метрах */
+      "activation": {
+        "method": "key",                     /* key або ui_button або auto */
+        "key": "Alt",                        /* клавіша для взаємодії */
+        "action": "enter_and_buy",           /* enter_and_buy | open_menu | collect_all */
+        "action_params": { "collect_all": true }
+      },
+      "label_hint": "Натисніть Alt, щоб зайти і купити",
+      "only_when_open": true                 /* дія доступна лише у години роботи */
+    }
+  },
+  "shop": {
+    "name": "АТБ-Маркет №1234",
+    "brand": "АТБ",
+    "type": "supermarket",
+    "open_hours": "07:00-23:00",
+    "interaction": {
+      "on_enter_message": "Натисніть Alt, щоб відкрити магазин",
+      "keyboard_shortcut": "Alt",
+      "default_action": "open_menu"
+    }
+  }
+}
