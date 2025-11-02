@@ -1,0 +1,268 @@
+
+{
+  "country": "Україна",
+  "iso": "UA",
+  "region": {
+    "name": "Київська область",
+    "type": "oblast",
+    "code": "UA-32",
+    "cities": [
+      {
+        "name": "Бровари",
+        "type": "city",
+        "population": 102000,
+        "gps": { "lat": 50.512, "lon": 30.786 },
+        "railway_stations": [
+          {
+            "name": "Бровари",
+            "type": "пасажирський",
+            "address": "вул. Гагаріна, 2",
+            "gps": { "lat": 50.513, "lon": 30.789 }
+          }
+        ],
+        "roads": [
+          {
+            "name": "вул. Гагаріна",
+            "type": "street",
+            "classification": "local",
+            "start_gps": { "lat": 50.508, "lon": 30.780 },
+            "end_gps": { "lat": 50.518, "lon": 30.794 },
+            "length_km": 2.1,
+            "surface": "асфальт",
+            "lanes": 2
+          }
+        ],
+        "bridges": [
+          {
+            "name": "Міський міст (вул. Гагаріна)",
+            "type": "road",
+            "material": "бетон/сталь",
+            "length_m": 160,
+            "lanes": 2,
+            "built_year": 1985,
+            "gps": { "lat": 50.5128, "lon": 30.7886 },
+            "status": "in_service",
+            "notes": "Головний автомобільний міст у центральній частині міста (прикладний запис)."
+          },
+          {
+            "name": "Пішохідний міст біля парку",
+            "type": "pedestrian",
+            "material": "метал",
+            "length_m": 45,
+            "lanes": 0,
+            "built_year": 2004,
+            "gps": { "lat": 50.5145, "lon": 30.7920 },
+            "status": "in_service"
+          }
+        ],
+        "buildings": [
+          {
+            "address": { "street": "вул. Гагаріна", "number": "2" },
+            "type": "apartment_building",
+            "construction_year": 1988,
+            "floors": 5,
+            "apartments_count": 20,
+            "gps": { "lat": 50.5130, "lon": 30.7890 },
+            "apartments": [
+              { "number": "1", "floor": 1, "rooms": 2, "area_m2": 48.0, "residents": 3, "status": "occupied" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Біла Церква",
+        "type": "city",
+        "population": 210000,
+        "gps": { "lat": 49.790, "lon": 30.115 },
+        "railway_stations": [
+          {
+            "name": "Біла Церква",
+            "type": "пасажирський",
+            "address": "вул. Станційна, 1",
+            "gps": { "lat": 49.791, "lon": 30.117 }
+          }
+        ],
+        "roads": [
+          {
+            "name": "вул. Ярослава Мудрого",
+            "type": "street",
+            "classification": "local",
+            "start_gps": { "lat": 49.788, "lon": 30.110 },
+            "end_gps": { "lat": 49.795, "lon": 30.120 },
+            "length_km": 1.8,
+            "surface": "асфальт",
+            "lanes": 2
+          }
+        ],
+        "bridges": [
+          {
+            "name": "Міст на бул. Олександрійський",
+            "type": "road",
+            "material": "залізобетон",
+            "length_m": 120,
+            "lanes": 2,
+            "built_year": 1978,
+            "gps": { "lat": 49.7925, "lon": 30.1165 },
+            "status": "in_service"
+          },
+          {
+            "name": "Залізничний міст (поблизу вокзалу)",
+            "type": "rail",
+            "material": "сталь",
+            "length_m": 220,
+            "lanes": null,
+            "built_year": 1955,
+            "gps": { "lat": 49.7909, "lon": 30.1180 },
+            "status": "in_service"
+          }
+        ],
+        "buildings": [
+          {
+            "address": { "street": "вул. Ярослава Мудрого", "number": "10" },
+            "type": "apartment_building",
+            "construction_year": 1975,
+            "floors": 9,
+            "apartments_count": 45,
+            "gps": { "lat": 49.7920, "lon": 30.1160 },
+            "apartments": [
+              { "number": "3", "floor": 1, "rooms": 1, "area_m2": 30.5, "residents": 1, "status": "occupied" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ірпінь",
+        "type": "city",
+        "population": 61000,
+        "gps": { "lat": 50.521, "lon": 30.255 },
+        "railway_stations": [
+          {
+            "name": "Ірпінь",
+            "type": "пасажирський",
+            "address": "вул. Центральна",
+            "gps": { "lat": 50.520, "lon": 30.257 }
+          }
+        ],
+        "roads": [
+          {
+            "name": "вул. Центральна",
+            "type": "street",
+            "classification": "urban",
+            "start_gps": { "lat": 50.518, "lon": 30.250 },
+            "end_gps": { "lat": 50.525, "lon": 30.260 },
+            "length_km": 1.6,
+            "surface": "асфальт",
+            "lanes": 2
+          }
+        ],
+        "bridges": [
+          {
+            "name": "Міст через річку Ірпінь (вул. Центральна)",
+            "type": "road",
+            "material": "бетон",
+            "length_m": 180,
+            "lanes": 4,
+            "built_year": 1990,
+            "gps": { "lat": 50.5202, "lon": 30.2558 },
+            "status": "in_service"
+          },
+          {
+            "name": "Пішохідний міст на набережній",
+            "type": "pedestrian",
+            "material": "метал/дерево",
+            "length_m": 35,
+            "lanes": 0,
+            "built_year": 2010,
+            "gps": { "lat": 50.5218, "lon": 30.2585 },
+            "status": "in_service"
+          }
+        ],
+        "buildings": [
+          {
+            "address": { "street": "вул. Центральна", "number": "1" },
+            "type": "mixed_use",
+            "construction_year": 2000,
+            "floors": 5,
+            "apartments_count": 10,
+            "gps": { "lat": 50.5205, "lon": 30.2575 },
+            "apartments": [
+              { "number": "1A", "floor": 1, "rooms": 1, "area_m2": 34.0, "residents": 1, "status": "occupied" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Фастів",
+        "type": "city",
+        "population": 46000,
+        "gps": { "lat": 50.073, "lon": 29.905 },
+        "railway_stations": [
+          {
+            "name": "Фастів",
+            "type": "пасажирський/вантажний",
+            "address": "вул. Вокзальна, 1",
+            "gps": { "lat": 50.074, "lon": 29.904 }
+          }
+        ],
+        "roads": [
+          {
+            "name": "вул. Вокзальна",
+            "type": "street",
+            "classification": "local",
+            "start_gps": { "lat": 50.072, "lon": 29.900 },
+            "end_gps": { "lat": 50.076, "lon": 29.908 },
+            "length_km": 0.9,
+            "surface": "асфальт",
+            "lanes": 2
+          }
+        ],
+        "bridges": [
+          {
+            "name": "Вокзальний міст",
+            "type": "road",
+            "material": "залізобетон",
+            "length_m": 95,
+            "lanes": 2,
+            "built_year": 1960,
+            "gps": { "lat": 50.0738, "lon": 29.9045 },
+            "status": "in_service"
+          },
+          {
+            "name": "Залізничний міст Фастів-ІІ",
+            "type": "rail",
+            "material": "сталь",
+            "length_m": 300,
+            "lanes": null,
+            "built_year": 1950,
+            "gps": { "lat": 50.0745, "lon": 29.9030 },
+            "status": "in_service"
+          }
+        ],
+        "buildings": [
+          {
+            "address": { "street": "вул. Вокзальна", "number": "1" },
+            "type": "public_transport_hub",
+            "construction_year": 1960,
+            "floors": 2,
+            "apartments_count": 0,
+            "gps": { "lat": 50.0740, "lon": 29.9040 },
+            "apartments": []
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "generated_for": "Київська область — приклад мостів для всіх міст у вибірці",
+    "notes": "Мости додані як прикладні об'єкти. Якщо потрібно, можу розгорнути розділ 'bridges' для всіх міст України або наповнити реальними даними з OpenStreetMap/державних реєстрів."
+  }
+}
+{
+  "country": "Україна",
+  "iso": "UA",
+  "region": {
+    "name": "Київська область",
+    "type": "oblast",
+    "code": "UA-32",
+    "cities": [
+      
