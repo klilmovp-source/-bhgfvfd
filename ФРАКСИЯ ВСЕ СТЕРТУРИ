@@ -1,0 +1,283 @@
+
+{
+  "country": "Україна",
+  "iso": "UA",
+  "region": {
+    "name": "Київська область",
+    "type": "oblast",
+    "code": "UA-32",
+    "cities": [
+      {
+        "name": "Біла Церква",
+        "type": "city",
+        "population": 210000,
+        "gps": { "lat": 49.790, "lon": 30.115 },
+        "institutions": [
+          {
+            "id": "inst-bc-001",
+            "name": "Міська рада Білої Церкви (Виконавчий комітет)",
+            "type": "city_council",
+            "authority": "ВРАДА/місцеве самоврядування",
+            "address": "вул. Соборна, 1",
+            "gps": { "lat": 49.7905, "lon": 30.1148 },
+            "contact": { "phone": "+380-456-000-111", "email": "rada@bilatc.example" },
+            "access_level": "public",
+            "can_enter": true,
+            "notes": "Приймальні громадян, адміністративні послуги."
+          },
+          {
+            "id": "inst-bc-002",
+            "name": "Муніципальна поліклініка (МОЗ — центр первинної допомоги)",
+            "type": "health_center",
+            "authority": "МОЗ (підпорядкування регіональне)",
+            "address": "вул. Лікарняна, 4",
+            "gps": { "lat": 49.7898, "lon": 30.1165 },
+            "contact": { "phone": "+380-456-000-222" },
+            "access_level": "public",
+            "can_enter": true,
+            "notes": "Приймальне відділення, вакцинація, швидка допомога."
+          },
+          {
+            "id": "inst-bc-003",
+            "name": "Білоцерківський відділ поліції",
+            "type": "police_station",
+            "authority": "Національна поліція України",
+            "address": "вул. Поліцейська, 2",
+            "gps": { "lat": 49.7912, "lon": 30.1170 },
+            "contact": { "phone": "+380-456-000-333" },
+            "access_level": "public",
+            "can_enter": true,
+            "notes": "Цілодобова дільниця поліції."
+          },
+          {
+            "id": "inst-bc-004",
+            "name": "Регіональне представництво СБУ — приймальня",
+            "type": "security_service",
+            "authority": "СБУ",
+            "address": "вул. Службова, 7",
+            "gps": { "lat": 49.7920, "lon": 30.1185 },
+            "contact": { "phone": "+380-456-000-444" },
+            "access_level": "restricted",
+            "can_enter": false,
+            "notes": "Строкате представництво/приймальня. Доступ за перепустками; громадянам — через приймальню."
+          }
+        ]
+      },
+      {
+        "name": "Бровари",
+        "type": "city",
+        "population": 102000,
+        "gps": { "lat": 50.512, "lon": 30.786 },
+        "institutions": [
+          {
+            "id": "inst-br-001",
+            "name": "Броварська міська рада",
+            "type": "city_council",
+            "authority": "місцеве самоврядування",
+            "address": "вул. Гагаріна, 20",
+            "gps": { "lat": 50.5130, "lon": 30.7870 },
+            "contact": { "phone": "+380-457-100-111" },
+            "access_level": "public",
+            "can_enter": true,
+            "notes": "Робочі години: 09:00-18:00."
+          },
+          {
+            "id": "inst-br-002",
+            "name": "Центр первинної медичної допомоги (МОЗ)",
+            "type": "health_center",
+            "authority": "МОЗ",
+            "address": "вул. Центральна, 5",
+            "gps": { "lat": 50.5125, "lon": 30.7865 },
+            "contact": { "phone": "+380-457-100-222" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-br-003",
+            "name": "Броварський відділ поліції",
+            "type": "police_station",
+            "authority": "Національна поліція України",
+            "address": "вул. Шевченка, 3",
+            "gps": { "lat": 50.5138, "lon": 30.7880 },
+            "contact": { "phone": "+380-457-100-333" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-br-004",
+            "name": "Приймальня СБУ (регіональна, представництво)",
+            "type": "security_service",
+            "authority": "СБУ",
+            "address": "вул. Офіцерська, 6",
+            "gps": { "lat": 50.5145, "lon": 30.7895 },
+            "contact": { "phone": "+380-457-100-444" },
+            "access_level": "restricted",
+            "can_enter": false,
+            "notes": "Офіційні звернення через приймальню; доступ обмежений."
+          }
+        ]
+      },
+      {
+        "name": "Бориспіль",
+        "type": "city",
+        "population": 61000,
+        "gps": { "lat": 50.345, "lon": 30.956 },
+        "institutions": [
+          {
+            "id": "inst-bp-001",
+            "name": "Бориспільська міська рада",
+            "type": "city_council",
+            "authority": "місцеве самоврядування",
+            "address": "вул. Миру, 1",
+            "gps": { "lat": 50.3455, "lon": 30.9555 },
+            "contact": { "phone": "+380-459-200-111" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-bp-002",
+            "name": "Бориспільський центр первинної медичної допомоги (МОЗ)",
+            "type": "health_center",
+            "authority": "МОЗ",
+            "address": "вул. Льотна, 2",
+            "gps": { "lat": 50.3440, "lon": 30.9570 },
+            "contact": { "phone": "+380-459-200-222" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-bp-003",
+            "name": "Бориспільський відділ поліції",
+            "type": "police_station",
+            "authority": "Національна поліція України",
+            "address": "вул. Центральна, 10",
+            "gps": { "lat": 50.3458, "lon": 30.9568 },
+            "contact": { "phone": "+380-459-200-333" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-bp-004",
+            "name": "Приймальня СБУ (представництво)",
+            "type": "security_service",
+            "authority": "СБУ",
+            "address": "вул. Оборонна, 4",
+            "gps": { "lat": 50.3462, "lon": 30.9575 },
+            "contact": { "phone": "+380-459-200-444" },
+            "access_level": "restricted",
+            "can_enter": false
+          }
+        ]
+      },
+      {
+        "name": "Фастів",
+        "type": "city",
+        "population": 46000,
+        "gps": { "lat": 50.073, "lon": 29.905 },
+        "institutions": [
+          {
+            "id": "inst-fs-001",
+            "name": "Фастівська міська рада",
+            "type": "city_council",
+            "authority": "місцеве самоврядування",
+            "address": "вул. Вокзальна, 8",
+            "gps": { "lat": 50.0735, "lon": 29.9055 },
+            "contact": { "phone": "+380-456-300-111" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-fs-002",
+            "name": "Центр первинної медичної допомоги (МОЗ)",
+            "type": "health_center",
+            "authority": "МОЗ",
+            "address": "вул. Здоров'я, 1",
+            "gps": { "lat": 50.0738, "lon": 29.9048 },
+            "contact": { "phone": "+380-456-300-222" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-fs-003",
+            "name": "Фастівський відділ поліції",
+            "type": "police_station",
+            "authority": "Національна поліція України",
+            "address": "вул. Вокзальна, 2",
+            "gps": { "lat": 50.0740, "lon": 29.9040 },
+            "contact": { "phone": "+380-456-300-333" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-fs-004",
+            "name": "Приймальня СБУ (місцева інформація)",
+            "type": "security_service",
+            "authority": "СБУ",
+            "address": "вул. Привокзальна, 5",
+            "gps": { "lat": 50.0742, "lon": 29.9052 },
+            "contact": { "phone": "+380-456-300-444" },
+            "access_level": "restricted",
+            "can_enter": false,
+            "notes": "Деякі послуги через центральний офіс у Києві."
+          }
+        ]
+      },
+      {
+        "name": "Ірпінь",
+        "type": "city",
+        "population": 61000,
+        "gps": { "lat": 50.521, "lon": 30.255 },
+        "institutions": [
+          {
+            "id": "inst-ir-001",
+            "name": "Ірпінська міська рада",
+            "type": "city_council",
+            "authority": "місцеве самоврядування",
+            "address": "вул. Центральна, 2",
+            "gps": { "lat": 50.5209, "lon": 30.2555 },
+            "contact": { "phone": "+380-457-300-111" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-ir-002",
+            "name": "Ірпінський центр первинної допомоги (МОЗ)",
+            "type": "health_center",
+            "authority": "МОЗ",
+            "address": "вул. Здоров'я, 10",
+            "gps": { "lat": 50.5215, "lon": 30.2562 },
+            "contact": { "phone": "+380-457-300-222" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-ir-003",
+            "name": "Ірпінь відділ поліції",
+            "type": "police_station",
+            "authority": "Національна поліція України",
+            "address": "вул. Лугова, 3",
+            "gps": { "lat": 50.5200, "lon": 30.2580 },
+            "contact": { "phone": "+380-457-300-333" },
+            "access_level": "public",
+            "can_enter": true
+          },
+          {
+            "id": "inst-ir-004",
+            "name": "Приймальня СБУ (представництво)",
+            "type": "security_service",
+            "authority": "СБУ",
+            "address": "вул. Службова, 1",
+            "gps": { "lat": 50.5218, "lon": 30.2590 },
+            "contact": { "phone": "+380-457-300-444" },
+            "access_level": "restricted",
+            "can_enter": false
+          }
+        ]
+      }
+    ]
+  },
+  "metadata": {
+    "generated_for": "Київська область — додано державні та силові установи (МОЗ/поліклініки, СБУ, ВРУ-представництва/міські ради, поліція)",
+    "notes": "Установи додані прикладно. SBU позначено як restricted/can_enter=false для більшості міст (реальна присутність штабів є в обласних центрах). Можливе подальше наповнення реальними координатами з OSM або офіційних реєстрів."
+  }
+}
