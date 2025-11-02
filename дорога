@@ -1,0 +1,235 @@
+{
+  "country": "Україна",
+  "iso": "UA",
+  "region": {
+    "name": "Київська область",
+    "type": "oblast",
+    "code": "UA-32",
+    "cities": [
+      {
+        "name": "Бровари",
+        "type": "city",
+        "population": 102000,
+        "gps": { "lat": 50.512, "lon": 30.786 },
+        "railway_stations": [
+          {
+            "name": "Бровари",
+            "type": "пасажирський",
+            "address": "вул. Гагаріна, 2",
+            "gps": { "lat": 50.513, "lon": 30.789 }
+          }
+        ],
+        "roads": [
+          {
+            "name": "вул. Гагаріна",
+            "type": "street",
+            "classification": "local",
+            "start_gps": { "lat": 50.508, "lon": 30.780 },
+            "end_gps": { "lat": 50.518, "lon": 30.794 },
+            "length_km": 2.1,
+            "surface": "асфальт",
+            "lanes": 2
+          },
+          {
+            "name": "просп. Перемоги",
+            "type": "avenue",
+            "classification": "regional",
+            "start_gps": { "lat": 50.510, "lon": 30.770 },
+            "end_gps": { "lat": 50.520, "lon": 30.800 },
+            "length_km": 3.4,
+            "surface": "асфальт",
+            "lanes": 4
+          }
+        ],
+        "buildings": [
+          {
+            "address": { "street": "вул. Гагаріна", "number": "2" },
+            "type": "apartment_building",
+            "construction_year": 1988,
+            "floors": 5,
+            "apartments_count": 20,
+            "gps": { "lat": 50.5130, "lon": 30.7890 },
+            "apartments": [
+              { "number": "1", "floor": 1, "rooms": 2, "area_m2": 48.0, "residents": 3, "status": "occupied" },
+              { "number": "2", "floor": 1, "rooms": 1, "area_m2": 32.5, "residents": 1, "status": "occupied" },
+              { "number": "15", "floor": 4, "rooms": 3, "area_m2": 72.0, "residents": 4, "status": "occupied" }
+            ]
+          },
+          {
+            "address": { "street": "просп. Перемоги", "number": "10A" },
+            "type": "apartment_building",
+            "construction_year": 2006,
+            "floors": 9,
+            "apartments_count": 72,
+            "gps": { "lat": 50.5160, "lon": 30.7920 },
+            "apartments": [
+              { "number": "12", "floor": 2, "rooms": 2, "area_m2": 54.0, "residents": 2, "status": "occupied" },
+              { "number": "58", "floor": 7, "rooms": 1, "area_m2": 36.0, "residents": 1, "status": "vacant" }
+            ]
+          },
+          {
+            "address": { "street": "вул. Польова", "number": "5" },
+            "type": "private_house",
+            "construction_year": 1995,
+            "floors": 2,
+            "apartments_count": 1,
+            "gps": { "lat": 50.5110, "lon": 30.7830 },
+            "apartments": [
+              { "number": "1", "floor": 1, "rooms": 4, "area_m2": 120.0, "residents": 4, "status": "occupied" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Біла Церква",
+        "type": "city",
+        "population": 210000,
+        "gps": { "lat": 49.790, "lon": 30.115 },
+        "railway_stations": [
+          {
+            "name": "Біла Церква",
+            "type": "пасажирський",
+            "address": "вул. Станційна, 1",
+            "gps": { "lat": 49.791, "lon": 30.117 }
+          }
+        ],
+        "roads": [
+          {
+            "name": "вул. Ярослава Мудрого",
+            "type": "street",
+            "classification": "local",
+            "start_gps": { "lat": 49.788, "lon": 30.110 },
+            "end_gps": { "lat": 49.795, "lon": 30.120 },
+            "length_km": 1.8,
+            "surface": "асфальт",
+            "lanes": 2
+          },
+          {
+            "name": "бул. Олександрійський",
+            "type": "boulevard",
+            "classification": "urban",
+            "start_gps": { "lat": 49.789, "lon": 30.112 },
+            "end_gps": { "lat": 49.793, "lon": 30.118 },
+            "length_km": 1.2,
+            "surface": "асфальт",
+            "lanes": 2
+          }
+        ],
+        "buildings": [
+          {
+            "address": { "street": "вул. Ярослава Мудрого", "number": "10" },
+            "type": "apartment_building",
+            "construction_year": 1975,
+            "floors": 9,
+            "apartments_count": 45,
+            "gps": { "lat": 49.7920, "lon": 30.1160 },
+            "apartments": [
+              { "number": "3", "floor": 1, "rooms": 1, "area_m2": 30.5, "residents": 1, "status": "occupied" },
+              { "number": "27", "floor": 7, "rooms": 3, "area_m2": 68.0, "residents": 3, "status": "occupied" }
+            ]
+          },
+          {
+            "address": { "street": "бул. Олександрійський", "number": "4B" },
+            "type": "apartment_building",
+            "construction_year": 2012,
+            "floors": 7,
+            "apartments_count": 28,
+            "gps": { "lat": 49.7915, "lon": 30.1145 },
+            "apartments": [
+              { "number": "5", "floor": 1, "rooms": 2, "area_m2": 50.0, "residents": 2, "status": "occupied" },
+              { "number": "22", "floor": 6, "rooms": 2, "area_m2": 55.0, "residents": 2, "status": "vacant" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ірпінь",
+        "type": "city",
+        "population": 61000,
+        "gps": { "lat": 50.521, "lon": 30.255 },
+        "railway_stations": [
+          {
+            "name": "Ірпінь",
+            "type": "пасажирський",
+            "address": "вул. Центральна",
+            "gps": { "lat": 50.520, "lon": 30.257 }
+          }
+        ],
+        "roads": [
+          {
+            "name": "вул. Центральна",
+            "type": "street",
+            "classification": "urban",
+            "start_gps": { "lat": 50.518, "lon": 30.250 },
+            "end_gps": { "lat": 50.525, "lon": 30.260 },
+            "length_km": 1.6,
+            "surface": "асфальт",
+            "lanes": 2
+          }
+        ],
+        "buildings": [
+          {
+            "address": { "street": "вул. Центральна", "number": "1" },
+            "type": "mixed_use",
+            "construction_year": 2000,
+            "floors": 5,
+            "apartments_count": 10,
+            "gps": { "lat": 50.5205, "lon": 30.2575 },
+            "apartments": [
+              { "number": "1A", "floor": 1, "rooms": 1, "area_m2": 34.0, "residents": 1, "status": "occupied" },
+              { "number": "8", "floor": 4, "rooms": 3, "area_m2": 80.0, "residents": 3, "status": "occupied" }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Фастів",
+        "type": "city",
+        "population": 46000,
+        "gps": { "lat": 50.073, "lon": 29.905 },
+        "railway_stations": [
+          {
+            "name": "Фастів",
+            "type": "пасажирський/вантажний",
+            "address": "вул. Вокзальна, 1",
+            "gps": { "lat": 50.074, "lon": 29.904 }
+          }
+        ],
+        "roads": [
+          {
+            "name": "вул. Вокзальна",
+            "type": "street",
+            "classification": "local",
+            "start_gps": { "lat": 50.072, "lon": 29.900 },
+            "end_gps": { "lat": 50.076, "lon": 29.908 },
+            "length_km": 0.9,
+            "surface": "асфальт",
+            "lanes": 2
+          }
+        ],
+        "buildings": [
+          {
+            "address": { "street": "вул. Вокзальна", "number": "1" },
+            "type": "public_transport_hub",
+            "construction_year": 1960,
+            "floors": 2,
+            "apartments_count": 0,
+            "gps": { "lat": 50.0740, "lon": 29.9040 },
+            "apartments": []
+          },
+          {
+            "address": { "street": "вул. Вокзальна", "number": "3" },
+            "type": "apartment_building",
+            "construction_year": 1980,
+            "floors": 5,
+            "apartments_count": 25,
+            "gps": { "lat": 50.0750, "lon": 29.9055 },
+            "apartments": [
+              { "number": "2", "floor": 1, "rooms": 2, "area_m2": 45.0, "residents": 2, "status": "occupied" },
+              { "number": "20", "floor": 5, "rooms": 3, "area_m2": 70.0, "residents": 3, "status": "occupied" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
