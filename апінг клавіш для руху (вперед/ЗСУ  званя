@@ -1,0 +1,80 @@
+
+{
+  "form": {
+    "institution_type": "military",
+    "title": "Звернення / Приймальня — Збройні Сили України",
+    "description": "Форма для звернень до підрозділів ЗСУ: рекрутинг, служба, запити щодо переведень/підвищень, медична и інші служби. Поля конфіденційні; для передачі секретної інформації використовуйте захищені канали та код авторизації.",
+    "fields": [
+      { "name": "applicant_name", "label": "ПІБ", "type": "string", "required": true },
+      { "name": "dob", "label": "Дата народження", "type": "date", "required": false },
+      { "name": "military_id", "label": "Військовий квиток / ID (якщо є)", "type": "string", "required": false },
+      { "name": "unit", "label": "Підрозділ / частина (якщо відома)", "type": "string", "required": false },
+      { "name": "phone", "label": "Телефон", "type": "phone", "required": true },
+      { "name": "email", "label": "Електронна пошта", "type": "email", "required": false },
+      {
+        "name": "request_type",
+        "label": "Тип запиту",
+        "type": "select",
+        "required": true,
+        "options": ["Рекрутинг / вступ", "Переведення", "Підвищення / атестація", "Медичний запит", "Інша інформація / звернення"]
+      },
+      { "name": "issue_summary", "label": "Короткий опис питання / прохання", "type": "text", "required": true },
+      {
+        "name": "zsu_rank",
+        "label": "Поточне звання (ЗСУ)",
+        "type": "select",
+        "required": false,
+        "options": [
+          { "code": 1, "label": "1 — Рекрут" },
+          { "code": 2, "label": "2 — Солдат" },
+          { "code": 3, "label": "3 — Старший солдат" },
+          { "code": 4, "label": "4 — Капрал" },
+          { "code": 5, "label": "5 — Сержант" },
+          { "code": 6, "label": "6 — Старшина" },
+          { "code": 7, "label": "7 — Лейтенант" },
+          { "code": 8, "label": "8 — Капітан" }
+        ],
+        "hint": "Вкажіть ваше поточне службове звання у ЗСУ, якщо застосовується."
+      },
+      {
+        "name": "promotion_request",
+        "label": "Запит на підвищення звання",
+        "type": "boolean",
+        "required": false,
+        "hint": "Позначте, якщо подаєте прохання про підвищення звання або атестацію."
+      },
+      {
+        "name": "promotion_to_rank",
+        "label": "Бажане звання для підвищення",
+        "type": "select",
+        "required": false,
+        "options_source": "zsu_rank.options",
+        "hint": "Оберіть звання, на яке просите підвищити (повинно бути вище поточного)."
+      },
+      {
+        "name": "sensitivity",
+        "label": "Рівень чутливості інформації",
+        "type": "select",
+        "required": true,
+        "options": ["звичайне", "підвищене", "таємне"],
+        "hint": "Оберіть рівень чутливості. Для 'таємне' потрібен код авторизації і захищений канал."
+      },
+      { "name": "authorization_code", "label": "Код авторизації (якщо застосовується)", "type": "string", "required_if": { "sensitivity": "таємне" } },
+      { "name": "attachments", "label": "Файли / документи (шифруйте за можливості)", "type": "files", "required": false },
+      { "name": "preferred_date", "label": "Бажана дата контакту / прийому", "type": "date", "required": false },
+      { "name": "preferred_time", "label": "Бажаний час", "type": "time", "required": false },
+      { "name": "consent", "label": "Згода на обробку персональних даних", "type": "boolean", "required": true }
+    ],
+    "rank_hierarchy": {
+      "1": { "label": "Рекрут", "next": 2 },
+      "2": { "label": "Солдат", "next": 3 },
+      "3": { "label": "Старший солдат", "next": 4 },
+      "4": { "label": "Капрал", "next": 5 },
+      "5": { "label": "Сержант", "next": 6 },
+      "6": { "label": "Старшина", "next": 7 },
+      "7": { "label": "Лейтенант", "next": 8 },
+      "8": { "label": "Капітан", "next": null }
+    },
+    "notes": "Запити, що містять таємну або критично чутливу інформацію, повинні надсилатися тільки через захищені канали і містити код авторизації. Запити на підвищення потребують підтверджувальних документів."
+  }
+} 
