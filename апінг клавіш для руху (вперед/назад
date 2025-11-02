@@ -1,0 +1,66 @@
+
+{
+  "controls": {
+    "movement": {
+      "forward_key": "ц",
+      "back_key": "и",
+      "left_key": "ф",
+      "right_key": "в",
+      "alternative_keys": {
+        "forward": ["w", "ArrowUp"],
+        "back": ["s", "ArrowDown"],
+        "left": ["a", "ArrowLeft"],
+        "right": ["d", "ArrowRight"]
+      },
+      "repeat_on_hold": true,
+      "sensitivity": 1.0
+    },
+    "interaction": {
+      "key": "Alt",
+      "hint_text_template": "Натисніть {key} щоб взаємодіяти",
+      "default_action": "open_menu"
+    },
+    "mobile": {
+      "use_touch_buttons": true,
+      "touch_buttons": {
+        "forward": "btn_up",
+        "back": "btn_down",
+        "left": "btn_left",
+        "right": "btn_right",
+        "interact": "btn_interact"
+      }
+    }
+  },
+  "poi_marker": {
+    "id": "br-01",
+    "type": "shop",
+    "label": "АТБ, можна заходити і купувати",
+    "gps": { "lat": 50.5132, "lon": 30.7891 },
+    "interaction": {
+      "trigger": "on_enter",
+      "radius_m": 10,
+      "activation": {
+        "method": "key",
+        "key": "Alt",
+        "action": "enter_and_buy",
+        "action_params": { "collect_all": true }
+      },
+      "label_hint": "Натисніть Alt, щоб зайти і купити",
+      "only_when_open": true
+    }
+  },
+  "shop": {
+    "name": "АТБ-Маркет №1234",
+    "brand": "АТБ",
+    "type": "supermarket",
+    "address": "вул. Гагаріна, 4",
+    "gps": { "lat": 50.5132, "lon": 30.7891 },
+    "open_hours": "07:00-23:00",
+    "interaction": {
+      "on_enter_message": "Натисніть Alt, щоб відкрити магазин",
+      "keyboard_shortcut": "Alt",
+      "default_action": "open_menu",
+      "can_enter_and_buy": true
+    }
+  }
+}
