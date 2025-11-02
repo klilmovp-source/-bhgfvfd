@@ -1,0 +1,121 @@
+
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Форма — МОЗ / Медичний заклад</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    form { max-width:760px; border:1px solid #ddd; padding:18px; border-radius:6px; }
+    label { display:block; margin-top:10px; font-weight:600; }
+    input, textarea, select { width:100%; padding:8px; margin-top:6px; box-sizing:border-box; }
+    .hint { color:#666; font-size:0.9em; margin-top:4px; }
+    .inline { display:inline-block; width:48%; vertical-align:top; }
+  </style>
+</head>
+<body>
+  <h1>Запис / Звернення — МОЗ</h1>
+  <p class="hint">Форма для запису на прийом, вакцинацію або подачі запиту щодо професійного підвищення в медичній сфері.</p>
+
+  <form id="mozForm" onsubmit="submitForm(event)">
+    <label>ПІБ пацієнта <input name="patient_name" required></label>
+    <div class="inline">
+      <label>Дата народження <input type="date" name="dob" required></label>
+    </div>
+    <div class="inline" style="float:right">
+      <label>ID / Паспорт <input name="personal_id" required></label>
+    </div>
+
+    <label>Телефон <input name="phone" required></label>
+    <label>Е-пошта <input type="email" name="email"></label>
+
+    <label>Тип послуги
+      <select name="service_type" required>
+        <option>Консультація</option>
+        <option>Вакцинація</option>
+        <option>Екстрена допомога</option>
+        <option>Операція / хірургія</option>
+        <option>Довідка</option>
+      </select>
+    </label>
+
+    <label>Бажана дата <input type="date" name="preferred_date"></label>
+    <label>Бажаний час <input type="time" name="preferred_time"></label>
+
+    <label>Коротка медична історія / симптоми <textarea name="medical_history"></textarea></label>
+    <label>Медичні документи <input type="file" name="attachments" multiple></label>
+
+    <label>Ваша професійна позиція (МОЗ)
+      <select id="current_rank" name="current_rank">
+        <option value="">— не вказано —</option>
+        <option value="1">1 — Медбрат</option>
+        <option value="2">2 — Фармацевт</option>
+        <option value="3">3 — Фельдшер</option>
+        <option value="4">4 — Лікар травматолог</option>
+        <option value="5">5 — Лікар офтальмолог</option>
+        <option value="6">6 — Лікар терапевт</option>
+        <option value="7">7 — Лікар хірург</option>
+        <option value="8">8 — Сімейний лікар</option>
+      </select>
+    </label>
+
+    <label><input type="checkbox" id="promotion_request" name="promotion_request"> Подати запит на підвищення / атестацію</label>
+
+    <label>Бажане звання / позиція для підвищення
+      <select id="promotion_to_rank" name="promotion_to_rank" disabled>
+        <option value="">— оберіть позицію —</option>
+        <option value="2">2 — Фармацевт</option>
+        <option value="3">3 — Фельдшер</option>
+        <option value="4">4 — Лікар травматолог</option>
+        <option value="5">5 — Лікар офтальмолог</option>
+        <option value="6">6 — Лікар терапевт</option>
+        <option value="7">7 — Лікар хірург</option>
+        <option value="8">8 — Сімейний лікар</option>
+      </select>
+      <div class="hint">Якщо подаєте на підвищення — оберіть позицію вищу за вашу поточну.</div>
+    </label>
+
+    <label><input type="checkbox" name="consent" required> Підтверджую згоду на обробку медичних та персональних даних</label>
+
+    <div style="margin-top:14px"><button type="submit">Відправити</button></div>
+  </form>
+
+  <script>
+    const rankHierarchy = { "1":2, "2":3, "3":4, "4":5, "5":6, "6":7, "7":8, "8":null };
+    const rankSelect = document.getElementById('current_rank');
+    const promotionCheckbox = document.getElementById('promotion_request');
+    const promotionToSelect = document.getElementById('promotion_to_rank');
+
+    function updatePromotionOptions(){
+      const cur = rankSelect.value ? parseInt(rankSelect.value) : null;
+      for(const opt of promotionToSelect.options){
+        if(!opt.value) continue;
+        opt.disabled = false;
+        if(cur && parseInt(opt.value) <= cur) opt.disabled = true;
+      }
+    }
+
+    rankSelect.addEventListener('change', updatePromotionOptions);
+    promotionCheckbox.addEventListener('change', () => {
+      promotionToSelect.disabled = !promotionCheckbox.checked;
+      if(!promotionCheckbox.checked) promotionToSelect.value = "";
+    });
+
+    function submitForm(e){
+      e.preventDefault();
+      const form = document.getElementById('mozForm');
+      const data = new FormData(form);
+      const obj = {};
+      data.forEach((v,k) => {
+        if(v instanceof File) return;
+        if(obj[k] !== undefined){
+          if(!Array.isArray(obj[k])) obj[k] = [obj[k]];
+          obj[k].push(v);
+        } else obj[k] = v;
+      });
+      alert('Форма МОЗ зібрана локально:\n' + JSON.stringify(obj, null, 2) + '\n\nДокументи слід відправляти через захищений канал, якщо вони містять персональні дані.');
+      // TODO: відправка на сервер (HTTPS) та серверна обробка запитів на підвищення.
+    }
+  </script>
+</body>
+</html>
