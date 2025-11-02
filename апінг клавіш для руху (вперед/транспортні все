@@ -1,0 +1,284 @@
+
+{
+  "country": "Україна",
+  "iso": "UA",
+  "region": {
+    "name": "Київська область",
+    "type": "oblast",
+    "code": "UA-32",
+    "cities": [
+      {
+        "name": "Біла Церква",
+        "type": "city",
+        "population": 210000,
+        "gps": { "lat": 49.790, "lon": 30.115 },
+        "vehicles_count_estimated": 63000,
+        "vehicles_samples": [
+          {
+            "id": "veh-bc-0001",
+            "type": "car",
+            "brand": "Toyota",
+            "model": "Corolla",
+            "color": "сірий",
+            "license_plate": "AA-XXXX-01",
+            "status": "parked",
+            "gps": { "lat": 49.7908, "lon": 30.1160 },
+            "owner_type": "private",
+            "fuel_level_pct": 67,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб зайти в авто" }
+          },
+          {
+            "id": "veh-bc-0002",
+            "type": "car",
+            "brand": "Volkswagen",
+            "model": "Passat",
+            "color": "чорний",
+            "license_plate": "AA-XXXX-02",
+            "status": "driving",
+            "gps": { "lat": 49.7895, "lon": 30.1145 },
+            "owner_type": "private",
+            "fuel_level_pct": 42,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб зайти в авто" }
+          },
+          {
+            "id": "veh-bc-0003",
+            "type": "truck",
+            "brand": "MAN",
+            "model": "TGL",
+            "color": "білий",
+            "license_plate": "BB-XXXX-03",
+            "status": "parked",
+            "gps": { "lat": 49.7910, "lon": 30.1180 },
+            "owner_type": "fleet",
+            "fuel_level_pct": 78,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб сісти в транспорт" }
+          }
+        ]
+      },
+      {
+        "name": "Бровари",
+        "type": "city",
+        "population": 102000,
+        "gps": { "lat": 50.512, "lon": 30.786 },
+        "vehicles_count_estimated": 30000,
+        "vehicles_samples": [
+          {
+            "id": "veh-br-0001",
+            "type": "car",
+            "brand": "Toyota",
+            "model": "Corolla",
+            "color": "синій",
+            "license_plate": "AA-XXXX-11",
+            "status": "parked",
+            "gps": { "lat": 50.5134, "lon": 30.7893 },
+            "owner_type": "private",
+            "fuel_level_pct": 55,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб зайти в авто" }
+          },
+          {
+            "id": "veh-br-0002",
+            "type": "car",
+            "brand": "Renault",
+            "model": "Megane",
+            "color": "сірий",
+            "license_plate": "AA-XXXX-12",
+            "status": "parked",
+            "gps": { "lat": 50.5120, "lon": 30.7880 },
+            "owner_type": "private",
+            "fuel_level_pct": 33,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб зайти в авто" }
+          }
+        ]
+      },
+      {
+        "name": "Бориспіль",
+        "type": "city",
+        "population": 61000,
+        "gps": { "lat": 50.345, "lon": 30.956 },
+        "vehicles_count_estimated": 18000,
+        "vehicles_samples": [
+          {
+            "id": "veh-bp-0001",
+            "type": "car",
+            "brand": "Skoda",
+            "model": "Octavia",
+            "color": "сріблястий",
+            "license_plate": "AA-XXXX-21",
+            "status": "parked",
+            "gps": { "lat": 50.3440, "lon": 30.9570 },
+            "owner_type": "private",
+            "fuel_level_pct": 80,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб сісти в авто" }
+          }
+        ]
+      },
+      {
+        "name": "Фастів",
+        "type": "city",
+        "population": 46000,
+        "gps": { "lat": 50.073, "lon": 29.905 },
+        "vehicles_count_estimated": 14000,
+        "vehicles_samples": [
+          {
+            "id": "veh-fs-0001",
+            "type": "car",
+            "brand": "Renault",
+            "model": "Kangoo",
+            "color": "білий",
+            "license_plate": "CC-XXXX-31",
+            "status": "parked",
+            "gps": { "lat": 50.0738, "lon": 29.9045 },
+            "owner_type": "private",
+            "fuel_level_pct": 50,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб сісти в авто" }
+          }
+        ]
+      },
+      {
+        "name": "Ірпінь",
+        "type": "city",
+        "population": 61000,
+        "gps": { "lat": 50.521, "lon": 30.255 },
+        "vehicles_count_estimated": 18500,
+        "vehicles_samples": [
+          {
+            "id": "veh-ir-0001",
+            "type": "car",
+            "brand": "Hyundai",
+            "model": "Accent",
+            "color": "червоний",
+            "license_plate": "AA-XXXX-41",
+            "status": "parked",
+            "gps": { "lat": 50.5208, "lon": 30.2570 },
+            "owner_type": "private",
+            "fuel_level_pct": 23,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб зайти в авто" }
+          }
+        ]
+      },
+      {
+        "name": "Васильків",
+        "type": "city",
+        "population": 35000,
+        "gps": { "lat": 49.983, "lon": 30.403 },
+        "vehicles_count_estimated": 10500,
+        "vehicles_samples": [
+          {
+            "id": "veh-vk-0001",
+            "type": "car",
+            "brand": "Ford",
+            "model": "Focus",
+            "color": "синій",
+            "license_plate": "BB-XXXX-51",
+            "status": "parked",
+            "gps": { "lat": 49.9840, "lon": 30.4050 },
+            "owner_type": "private",
+            "fuel_level_pct": 66,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб сісти в авто" }
+          }
+        ]
+      },
+      {
+        "name": "Обухів",
+        "type": "city",
+        "population": 33000,
+        "gps": { "lat": 50.083, "lon": 30.483 },
+        "vehicles_count_estimated": 9900,
+        "vehicles_samples": [
+          {
+            "id": "veh-ob-0001",
+            "type": "car",
+            "brand": "Renault",
+            "model": "Clio",
+            "color": "сірий",
+            "license_plate": "BB-XXXX-61",
+            "status": "parked",
+            "gps": { "lat": 50.0840, "lon": 30.4850 },
+            "owner_type": "private",
+            "fuel_level_pct": 45,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб сісти в авто" }
+          }
+        ]
+      },
+      {
+        "name": "Переяслав (Переяслав-Хмельницький)",
+        "type": "city",
+        "population": 28000,
+        "gps": { "lat": 50.070, "lon": 31.449 },
+        "vehicles_count_estimated": 8400,
+        "vehicles_samples": [
+          {
+            "id": "veh-py-0001",
+            "type": "car",
+            "brand": "Opel",
+            "model": "Astra",
+            "color": "чорний",
+            "license_plate": "CC-XXXX-71",
+            "status": "parked",
+            "gps": { "lat": 50.0710, "lon": 31.4520 },
+            "owner_type": "private",
+            "fuel_level_pct": 59,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб зайти в авто" }
+          }
+        ]
+      },
+      {
+        "name": "Миронівка",
+        "type": "city",
+        "population": 11000,
+        "gps": { "lat": 49.946, "lon": 30.908 },
+        "vehicles_count_estimated": 3300,
+        "vehicles_samples": [
+          {
+            "id": "veh-mv-0001",
+            "type": "car",
+            "brand": "Lada",
+            "model": "Vesta",
+            "color": "білий",
+            "license_plate": "DD-XXXX-81",
+            "status": "parked",
+            "gps": { "lat": 49.9460, "lon": 30.9090 },
+            "owner_type": "private",
+            "fuel_level_pct": 38,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб сісти в авто" }
+          }
+        ]
+      },
+      {
+        "name": "Яготин",
+        "type": "city",
+        "population": 17000,
+        "gps": { "lat": 50.353, "lon": 31.809 },
+        "vehicles_count_estimated": 5100,
+        "vehicles_samples": [
+          {
+            "id": "veh-yg-0001",
+            "type": "car",
+            "brand": "Renault",
+            "model": "Symbol",
+            "color": "сірий",
+            "license_plate": "DD-XXXX-91",
+            "status": "parked",
+            "gps": { "lat": 50.3540, "lon": 31.8100 },
+            "owner_type": "private",
+            "fuel_level_pct": 49,
+            "can_enter": true,
+            "interaction": { "key": "E", "action": "enter_vehicle", "label_hint": "Натисніть E, щоб зайти в авто" }
+          }
+        ]
+      }
+    ]
+  }
+}
