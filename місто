@@ -1,0 +1,35 @@
+міста
+
+  "country": "Україна",
+  "iso": "UA",
+  "description": "Базова структура всіх області/регіонів України (2020 — регіональний список). Поля districts і cities залишені порожніми як заповнювачі для подальшого розгортання до районів/населених пунктів.",
+  "regions": [
+    { "name": "Вінницька область", "type": "oblast", "code": null, "admin_center": "Вінниця", "districts": [] },
+    { "name": "Волинська область", "type": "oblast", "code": null, "admin_center": "Луцьк", "districts": [] },
+    { "name": "Дніпропетровська область", "type": "oblast", "code": null, "admin_center": "Дніпро", "districts": [] },
+    { "name": "Донецька область", "type": "oblast", "code": null, "admin_center": "Донецьк", "districts": [] },
+    { "name": "Житомирська область", "type": "oblast", "code": null, "admin_center": "Житомир", "districts": [] },
+    { "name": "Закарпатська область", "type": "oblast", "code": null, "admin_center": "Ужгород", "districts": [] },
+    { "name": "Запорізька область", "type": "oblast", "code": null, "admin_center": "Запоріжжя", "districts": [] },
+    { "name": "Івано-Франківська область", "type": "oblast", "code": null, "admin_center": "Івано-Франківськ", "districts": [] },
+    { "name": "Київська область", "type": "oblast", "code": null, "admin_center": "Київ", "districts": [] },
+    { "name": "Кіровоградська область", "type": "oblast", "code": null, "admin_center": "Кропивницький", "districts": [] },
+    { "name": "Луганська область", "type": "oblast", "code": null, "admin_center": "Луганськ", "districts": [] },
+    { "name": "Львівська область", "type": "oblast", "code": null, "admin_center": "Львів", "districts": [] },
+    { "name": "Миколаївська область", "type": "oblast", "code": null, "admin_center": "Миколаїв", "districts": [] },
+    { "name": "Одеська область", "type": "oblast", "code": null, "admin_center": "Одеса", "districts": [] },
+    { "name": "Полтавська область", "type": "oblast", "code": null, "admin_center": "Полтава", "districts": [] },
+    { "name": "Рівненська область", "type": "oblast", "code": null, "admin_center": "Рівне", "districts": [] },
+    { "name": "Сумська область", "type": "oblast", "code": null, "admin_center": "Суми", "districts": [] },
+    { "name": "Тернопільська область", "type": "oblast", "code": null, "admin_center": "Тернопіль", "districts": [] },
+    { "name": "Харківська область", "type": "oblast", "code": null, "admin_center": "Харків", "districts": [] },
+    { "name": "Херсонська область", "type": "oblast", "code": null, "admin_center": "Херсон", "districts": [] },
+    { "name": "Хмельницька область", "type": "oblast", "code": null, "admin_center": "Хмельницький", "districts": [] },
+    { "name": "Черкаська область", "type": "oblast", "code": null, "admin_center": "Черкаси", "districts": [] },
+    { "name": "Чернівецька область", "type": "oblast", "code": null, "admin_center": "Чернівці", "districts": [] },
+    { "name": "Чернігівська область", "type": "oblast", "code": null, "admin_center": "Чернігів", "districts": [] },
+    { "name": "Автономна Республіка Крим", "type": "autonomous_republic", "code": null, "admin_center": "Сімферополь", "districts": [] },
+    { "name": "м. Київ (місто зі спеціальним статусом)", "type": "city", "code": null, "admin_center": "Київ", "districts": [] },
+    { "name": "м. Севастополь (місто зі спеціальним статусом)", "type": "city", "code": null, "admin_center": "Севастополь", "districts": [] }
+  ]
+}
