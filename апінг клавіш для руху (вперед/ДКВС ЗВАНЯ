@@ -1,0 +1,86 @@
+
+ {
+  "form": {
+    "institution_type": "correctional_service",
+    "title": "Звернення / Приймальня — ДКВС (Державна кримінально-виконавча служба)",
+    "description": "Форма для звернень до ДКВС: питання щодо відбування покарань, запити на переведення, підвищення за службою, запити громадян тощо. Поля конфіденційні; для передачі секретної інформації використовуйте захищені канали й код авторизації.",
+    "fields": [
+      { "name": "applicant_name", "label": "ПІБ", "type": "string", "required": true },
+      { "name": "dob", "label": "Дата народження", "type": "date", "required": false },
+      { "name": "document_type", "label": "Тип документу", "type": "select", "options": ["Паспорт", "ID-картка"], "required": true },
+      { "name": "document_number", "label": "Номер документу", "type": "string", "required": true },
+      { "name": "phone", "label": "Телефон", "type": "phone", "required": true },
+      { "name": "email", "label": "Електронна пошта", "type": "email", "required": false },
+      { "name": "unit", "label": "Підрозділ / установа (якщо відома)", "type": "string", "required": false },
+      {
+        "name": "request_type",
+        "label": "Тип запиту",
+        "type": "select",
+        "required": true,
+        "options": ["Інформаційний запит", "Скарга / звернення", "Переведення/переміщення", "Підвищення / атестація", "Юридична підтримка / консультація"]
+      },
+      { "name": "issue_summary", "label": "Короткий опис питання / прохання", "type": "text", "required": true },
+      {
+        "name": "dkvs_rank",
+        "label": "Поточне звання / посада (ДКВС)",
+        "type": "select",
+        "required": false,
+        "options": [
+          { "code": 1, "label": "1 — Сержант" },
+          { "code": 2, "label": "2 — Старший Сержант" },
+          { "code": 3, "label": "3 — Старшина" },
+          { "code": 4, "label": "4 — Прапорщик" },
+          { "code": 5, "label": "5 — Старший Прапорщик" },
+          { "code": 6, "label": "6 — Лейтенант" },
+          { "code": 7, "label": "7 — Старший Лейтенант" },
+          { "code": 8, "label": "8 — Капітан" },
+          { "code": 9, "label": "9 — Майор" },
+          { "code": 10, "label": "10 — Підполковник" },
+          { "code": 11, "label": "11 — Полковник" }
+        ],
+        "hint": "Вкажіть ваше службове звання в ДКВС, якщо застосовується."
+      },
+      {
+        "name": "promotion_request",
+        "label": "Запит на підвищення звання/посади",
+        "type": "boolean",
+        "required": false,
+        "hint": "Позначте, якщо подаєте прохання про підвищення або атестацію."
+      },
+      {
+        "name": "promotion_to_rank",
+        "label": "Бажане звання для підвищення",
+        "type": "select",
+        "required": false,
+        "options_source": "dkvs_rank.options",
+        "hint": "Оберіть звання вище поточного, якщо подаєте запит на підвищення."
+      },
+      {
+        "name": "sensitivity",
+        "label": "Рівень чутливості інформації",
+        "type": "select",
+        "required": true,
+        "options": ["звичайне", "підвищене", "таємне"],
+        "hint": "Для 'таємне' потрібен код авторизації і захищений канал."
+      },
+      { "name": "authorization_code", "label": "Код авторизації (якщо застосовується)", "type": "string", "required_if": { "sensitivity": "таємне" } },
+      { "name": "attachments", "label": "Документи / докази (шифруйте за можливості)", "type": "files", "required": false },
+      { "name": "preferred_date", "label": "Бажана дата контакту / прийому", "type": "date", "required": false },
+      { "name": "preferred_time", "label": "Бажаний час", "type": "time", "required": false },
+      { "name": "consent", "label": "Згода на обробку персональних даних", "type": "boolean", "required": true }
+    ],
+    "rank_hierarchy": {
+      "1": { "label": "Сержант", "next": 2 },
+      "2": { "label": "Старший Сержант", "next": 3 },
+      "3": { "label": "Старшина", "next": 4 },
+      "4": { "label": "Прапорщик", "next": 5 },
+      "5": { "label": "Старший Прапорщик", "next": 6 },
+      "6": { "label": "Лейтенант", "next": 7 },
+      "7": { "label": "Старший Лейтенант", "next": 8 },
+      "8": { "label": "Капітан", "next": 9 },
+      "9": { "label": "Майор", "next": 10 },
+      "10": { "label": "Підполковник", "next": 11 },
+      "11": { "label": "Полковник", "next": null }
+    },
+    "notes": "Запити, що містять таємну або чутливу інформацію щодо установ виконання покарань, повинні надсилатися лише через захищені канали. Запити на підвищення вимагають підтверджувальних документів та проходять внутрішню перевірку."
+  }
