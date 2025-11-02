@@ -1,0 +1,158 @@
+ДСНС 
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <title>Форма — ДСНС (звання та звернення)</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    form { max-width:820px; border:1px solid #ddd; padding:18px; border-radius:6px; }
+    label { display:block; margin-top:10px; font-weight:600; }
+    input, textarea, select { width:100%; padding:8px; margin-top:6px; box-sizing:border-box; }
+    .hint { color:#666; font-size:0.9em; margin-top:4px; }
+    .warning { color:#a00; font-weight:700; margin-top:8px; }
+    .two { display:flex; gap:12px; }
+    .two > div { flex:1; }
+  </style>
+</head>
+<body>
+  <h1>Звернення / Приймальня — ДСНС</h1>
+  <p class="warning">Для повідомлень про НС телефонуйте на екстрені номери. Для передачі чутливої інформації — використовуйте захищені канали і код авторизації.</p>
+
+  <form id="dsnsForm" onsubmit="submitForm(event)">
+    <label>ПІБ <input name="applicant_name" required></label>
+
+    <div class="two">
+      <div><label>Дата народження <input type="date" name="dob"></label></div>
+      <div><label>Тип документу
+        <select name="document_type" required>
+          <option>Паспорт</option><option>ID-картка</option>
+        </select>
+      </label></div>
+    </div>
+
+    <label>Номер документу <input name="document_number" required></label>
+    <label>Телефон <input name="phone" required></label>
+    <label>Е-пошта <input type="email" name="email"></label>
+
+    <label>Тип запиту
+      <select name="request_type" required>
+        <option>Повідомлення про НС</option>
+        <option>Запит на допомогу / евакуацію</option>
+        <option>Кадрове питання / підвищення</option>
+        <option>Консультація</option>
+        <option>Інше</option>
+      </select>
+    </label>
+
+    <label>Короткий опис питання / інциденту <textarea name="issue_summary" required></textarea></label>
+
+    <label>Поточне звання (ДСНС)
+      <select id="dsns_rank" name="dsns_rank">
+        <option value="">— не вказано —</option>
+        <option value="1">1 — Рядовий</option>
+        <option value="2">2 — Сержант</option>
+        <option value="3">3 — Старшина</option>
+        <option value="4">4 — Прапорщик</option>
+        <option value="5">5 — Молодший лейтенант</option>
+        <option value="6">6 — Лейтенант</option>
+        <option value="7">7 — Старший лейтенант</option>
+      </select>
+      <div class="hint">Вкажіть ваше поточне службове звання в ДСНС, якщо застосовується.</div>
+    </label>
+
+    <label><input type="checkbox" id="promotion_request" name="promotion_request"> Подати запит на підвищення звання / атестацію</label>
+
+    <label>Бажане звання для підвищення
+      <select id="promotion_to_rank" name="promotion_to_rank" disabled>
+        <option value="">— оберіть звання —</option>
+        <option value="2">2 — Сержант</option>
+        <option value="3">3 — Старшина</option>
+        <option value="4">4 — Прапорщик</option>
+        <option value="5">5 — Молодший лейтенант</option>
+        <option value="6">6 — Лейтенант</option>
+        <option value="7">7 — Старший лейтенант</option>
+      </select>
+      <div class="hint">Якщо подаєте на підвищення — оберіть звання вище за ваше поточне.</div>
+    </label>
+
+    <label>Рівень чутливості інформації
+      <select id="sensitivity" name="sensitivity" required>
+        <option value="звичайне">звичайне</option>
+        <option value="підвищене">підвищене</option>
+        <option value="таємне">таємне</option>
+      </select>
+    </label>
+
+    <div id="authBlock" style="display:none">
+      <label>Код авторизації (для 'таємне') <input id="authorization_code" name="authorization_code"></label>
+      <div class="hint">Поле обов'язкове для повідомлень з рівнем 'таємне'.</div>
+    </div>
+
+    <label>Файли / докази <input type="file" name="attachments" multiple></label>
+    <div class="hint">Якщо додаєте файли з чутливими даними — шифруйте їх перед відправкою.</div>
+
+    <div class="two">
+      <div><label>Бажана дата <input type="date" name="preferred_date"></label></div>
+      <div><label>Бажаний час <input type="time" name="preferred_time"></label></div>
+    </div>
+
+    <label><input type="checkbox" name="consent" required> Підтверджую згоду на обробку персональних даних</label>
+
+    <div style="margin-top:14px"><button type="submit">Надіслати звернення</button></div>
+  </form>
+
+  <script>
+    const rankHierarchy = {"1":2,"2":3,"3":4,"4":5,"5":6,"6":7,"7":null};
+    const rankSelect = document.getElementById('dsns_rank');
+    const promotionCheckbox = document.getElementById('promotion_request');
+    const promotionToSelect = document.getElementById('promotion_to_rank');
+    const sensitivitySelect = document.getElementById('sensitivity');
+    const authBlock = document.getElementById('authBlock');
+    const authInput = document.getElementById('authorization_code');
+
+    function updatePromotionOptions(){
+      const cur = rankSelect.value ? parseInt(rankSelect.value) : null;
+      for(const opt of promotionToSelect.options){
+        if(!opt.value) continue;
+        opt.disabled = false;
+        if(cur && parseInt(opt.value) <= cur) opt.disabled = true;
+      }
+    }
+
+    rankSelect.addEventListener('change', updatePromotionOptions);
+    promotionCheckbox.addEventListener('change', () => {
+      promotionToSelect.disabled = !promotionCheckbox.checked;
+      if(!promotionCheckbox.checked) promotionToSelect.value = "";
+    });
+
+    sensitivitySelect.addEventListener('change', () => {
+      const v = sensitivitySelect.value;
+      if(v === 'таємне'){
+        authBlock.style.display = 'block';
+        authInput.required = true;
+      } else {
+        authBlock.style.display = 'none';
+        authInput.required = false;
+        authInput.value = '';
+      }
+    });
+
+    function submitForm(e){
+      e.preventDefault();
+      const form = document.getElementById('dsnsForm');
+      const data = new FormData(form);
+      const obj = {};
+      data.forEach((v,k) => {
+        if(v instanceof File) return;
+        if(obj[k] !== undefined){
+          if(!Array.isArray(obj[k])) obj[k] = [obj[k]];
+          obj[k].push(v);
+        } else obj[k] = v;
+      });
+      alert('Форма ДСНС зібрана локально:\n' + JSON.stringify(obj, null, 2) + '\n\nФайли та таємні дані потрібно надсилати через захищений канал.');
+      // TODO: реалізувати відправку на сервер з HTTPS + шифрування вкладень, перевірка authorization_code на бекенді.
+    }
+  </script>
+</body>
+</html>
